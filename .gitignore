@@ -1,37 +1,167 @@
-# --- .NET ---
-# Bỏ qua các thư mục build
+# ================================
+# 🧱 .NET & ASP.NET Core
+# ================================
 **/[Bb]in/
 **/[Oo]bj/
+**/[Ll]og/
+**/[Ll]ogs/
+**/out/
+*.log
+*.tmp
+*.temp
+*.bak
 
-# --- JetBrains Rider ---
-# Cài đặt riêng của Rider
+# User secrets và cấu hình cục bộ (local config)
+secrets.json
+appsettings.Local.json
+appsettings.Development.Local.json
+*.Secret.json
+*.secrets.json
+
+# Publish outputs
+**/publish/
+**/dist/
+**/Debug/
+**/Release/
+**/x64/
+**/x86/
+**/build/
+**/BuildOutput/
+**/Generated/
+
+# ASP.NET static assets build
+**/wwwroot/lib/
+**/wwwroot/dist/
+**/wwwroot/node_modules/
+**/wwwroot/build/
+**/staticwebassets.build.json
+**/staticwebassets.development.json
+
+# ================================
+# 💻 IDE: JetBrains Rider / Visual Studio
+# ================================
+# Rider
 .idea/
+*.sln.iml
 *.sln.DotSettings.user
 
-# --- Visual Studio ---
-# Cài đặt riêng của Visual Studio (phòng khi bạn hoặc người khác mở bằng VS)
+# Visual Studio
 .vs/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
-# --- ASP.NET Core ---
-# File chứa "secrets" của người dùng, không bao giờ được commit
-secrets.json
-appsettings.Local.json
-*.Secret.json
+# Visual Studio Code
+.vscode/
+.history/
+*.code-workspace
 
-# Bỏ qua các file log
-*.log
-logs/
+# ================================
+# 📦 NuGet & Build System
+# ================================
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuspec
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.assets.json
 
-# --- Hệ điều hành ---
-# File rác của macOS
+# Paket (alternative dependency manager)
+.paket/
+paket-files/
+
+# ================================
+# 🧰 Tools & Cache
+# ================================
+# Rider / ReSharper cache
+_ReSharper*/
+*.DotSettings.user
+
+# Temporary files
+*.pidb
+*.userprefs
+*.pidb.meta
+*.ilk
+*.obj
+*.pch
+*.pdb
+*.mdb
+*.ipch
+*.aps
+*.ncb
+*.res
+*.tlb
+*.tlh
+*.tmp
+*.bak
+*.old
+*.orig
+
+# ================================
+# 🐳 Docker
+# ================================
+# Ignore Docker build output
+**/Dockerfile.*
+**/docker-compose.*
+!docker-compose.yml      # (keep root compose file)
+!Dockerfile              # (keep main Dockerfile)
+.docker/
+docker-compose.override.yml
+
+# ================================
+# 🪟 OS Files
+# ================================
+# macOS
 .DS_Store
-# File rác của Windows
-Thumbs.db
+.AppleDouble
+.LSOverride
 
-# --- Khác ---
-# Các file kết quả test
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.cache/
+.Trash-*
+
+# ================================
+# 🧪 Tests
+# ================================
 TestResults/
+**/TestResult*/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+*.vsmdi
+*.vsp
+*.vspscc
+
+# ================================
+# 🔒 Security & Private
+# ================================
+*.key
+*.crt
+*.pem
+*.pfx
+*.p12
+.env
+.env.*
+*.config.user
+
+# ================================
+# 📄 Other
+# ================================
+# Ignore Rider restore cache files
+*.rider.project.*
+*.restore.info
+
+# Keep empty folders (optional)
+!**/[Bb]in/.gitkeep
+!**/[Oo]bj/.gitkeep
