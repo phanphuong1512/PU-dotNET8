@@ -1,0 +1,37 @@
+# --- .NET ---
+# Bỏ qua các thư mục build
+**/[Bb]in/
+**/[Oo]bj/
+
+# --- JetBrains Rider ---
+# Cài đặt riêng của Rider
+.idea/
+*.sln.DotSettings.user
+
+# --- Visual Studio ---
+# Cài đặt riêng của Visual Studio (phòng khi bạn hoặc người khác mở bằng VS)
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- ASP.NET Core ---
+# File chứa "secrets" của người dùng, không bao giờ được commit
+secrets.json
+appsettings.Local.json
+*.Secret.json
+
+# Bỏ qua các file log
+*.log
+logs/
+
+# --- Hệ điều hành ---
+# File rác của macOS
+.DS_Store
+# File rác của Windows
+Thumbs.db
+
+# --- Khác ---
+# Các file kết quả test
+TestResults/
