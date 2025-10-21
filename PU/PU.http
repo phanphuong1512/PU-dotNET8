@@ -1,0 +1,6 @@
+@PU_HostAddress = http://localhost:5073
+
+GET {{PU_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
