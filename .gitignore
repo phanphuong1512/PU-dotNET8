@@ -1,24 +1,17 @@
-# ================================
-# 🧱 .NET & ASP.NET Core
-# ================================
+# ===== .NET / ASP.NET Core =====
 **/[Bb]in/
 **/[Oo]bj/
-**/[Ll]og/
-**/[Ll]ogs/
+**/[Ll]og*/
 **/out/
 *.log
 *.tmp
-*.temp
 *.bak
 
-# User secrets và cấu hình cục bộ (local config)
 secrets.json
-appsettings.Local.json
-appsettings.Development.Local.json
+appsettings.*.Local.json
 *.Secret.json
 *.secrets.json
 
-# Publish outputs
 **/publish/
 **/dist/
 **/Debug/
@@ -28,124 +21,68 @@ appsettings.Development.Local.json
 **/build/
 **/BuildOutput/
 **/Generated/
-
-# ASP.NET static assets build
 **/wwwroot/lib/
 **/wwwroot/dist/
 **/wwwroot/node_modules/
 **/wwwroot/build/
-**/staticwebassets.build.json
-**/staticwebassets.development.json
+**/staticwebassets.*.json
 
-# ================================
-# 💻 IDE: JetBrains Rider / Visual Studio
-# ================================
-# Rider
+# ===== IDE =====
 .idea/
-*.sln.iml
-*.sln.DotSettings.user
-
-# Visual Studio
 .vs/
+.vscode/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
-
-# Visual Studio Code
-.vscode/
 .history/
 *.code-workspace
 
-# ================================
-# 📦 NuGet & Build System
-# ================================
-# NuGet Packages
+# ===== NuGet =====
 *.nupkg
 *.snupkg
 *.nuspec
-*.nuget.props
-*.nuget.targets
 project.lock.json
 project.assets.json
-
-# Paket (alternative dependency manager)
 .paket/
 paket-files/
 
-# ================================
-# 🧰 Tools & Cache
-# ================================
-# Rider / ReSharper cache
+# ===== Cache / Temp =====
 _ReSharper*/
 *.DotSettings.user
-
-# Temporary files
 *.pidb
 *.userprefs
-*.pidb.meta
-*.ilk
-*.obj
-*.pch
 *.pdb
-*.mdb
-*.ipch
-*.aps
-*.ncb
-*.res
-*.tlb
-*.tlh
 *.tmp
-*.bak
 *.old
 *.orig
 
-# ================================
-# 🐳 Docker
-# ================================
-# Ignore Docker build output
-**/Dockerfile.*
-**/docker-compose.*
-!docker-compose.yml      # (keep root compose file)
-!Dockerfile              # (keep main Dockerfile)
+# ===== Docker =====
 .docker/
 docker-compose.override.yml
+**/Dockerfile.*
+**/docker-compose.*
+!docker-compose.yml
+!Dockerfile
 
-# ================================
-# 🪟 OS Files
-# ================================
-# macOS
+# ===== OS =====
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-
-# Linux
 *~
-.cache/
-.Trash-*
 
-# ================================
-# 🧪 Tests
-# ================================
+# ===== Tests =====
 TestResults/
 **/TestResult*/
 *.trx
-*.coverage
-*.coveragexml
+*.coverage*
 *.testsettings
-*.vsmdi
-*.vsp
+*.vsp*
 *.vspscc
 
-# ================================
-# 🔒 Security & Private
-# ================================
+# ===== Security / Private =====
 *.key
 *.crt
 *.pem
@@ -153,15 +90,9 @@ TestResults/
 *.p12
 .env
 .env.*
-*.config.user
 
-# ================================
-# 📄 Other
-# ================================
-# Ignore Rider restore cache files
+# ===== Misc =====
 *.rider.project.*
 *.restore.info
-
-# Keep empty folders (optional)
 !**/[Bb]in/.gitkeep
 !**/[Oo]bj/.gitkeep
