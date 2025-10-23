@@ -43,5 +43,18 @@ namespace PU.Repositories.Implementations
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<bool> DeleteAsync(int orderId, int productId)
+        {
+            var detail = await _context.OrderDetails
+                .FirstOrDefaultAsync(d => d.OrderId == orderId && d.ProductId == productId);
+
+            if (detail == null)
+                return false; // Nothing to delete
+
+            _context.OrderDetails.Remove(detail);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }
