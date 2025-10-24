@@ -5,7 +5,7 @@ using PU.Services.Interfaces;
 namespace PU.Controllers
 {
     [ApiController]
-    [Route("api/users")]
+    [Route("api/reviews")]
     public class ReviewController : ControllerBase
     {
         private readonly IBaseService<Review> _reviewService;

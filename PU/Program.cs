@@ -22,6 +22,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// ✅ Thêm CORS cho React Frontend
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", policy =>
+        policy.WithOrigins("http://localhost:5173", "http://localhost:3000") // port React của bạn
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials());
+});
+
 var app = builder.Build();
 
 // --- Middleware ---
@@ -31,7 +41,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// ✅ Kích hoạt CORS
+app.UseCors("AllowReactApp");
+
 app.UseHttpsRedirection();
+
 app.MapControllers(); // để gọi các controller API của bạn
 
 app.Run();
