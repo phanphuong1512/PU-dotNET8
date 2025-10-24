@@ -1,0 +1,52 @@
+# =========================
+# Normalize line endings
+# =========================
+# Giúp tránh lỗi xuống dòng CRLF/LF khi làm việc giữa Windows/macOS/Linux
+* text=auto eol=lf
+
+# =========================
+# Source code diff settings
+# =========================
+*.cs     text diff=csharp
+*.csproj text
+*.vbproj text
+*.sln    text
+*.xaml   text
+*.xml    text
+*.json   text
+*.yml    text
+*.yaml   text
+*.config text
+*.props  text
+*.targets text
+*.razor  text
+*.cshtml text
+
+# =========================
+# Documentation
+# =========================
+*.md     text
+*.txt    text
+
+# =========================
+# Binary files (no diff)
+# =========================
+*.dll    binary
+*.exe    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.ico    binary
+*.gif    binary
+*.pdf    binary
+*.zip    binary
+*.tar    binary
+*.7z     binary
+*.mp4    binary
+*.mov    binary
+
+# =========================
+# Prevent merge conflicts in lock files
+# =========================
+*.lock merge=union
+project.lock.json -diff
