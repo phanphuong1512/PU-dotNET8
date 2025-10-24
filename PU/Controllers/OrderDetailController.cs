@@ -97,7 +97,7 @@ namespace PU.Controllers
             if (existing == null)
                 return NotFound();
 
-            await _orderDetailService.DeleteAsync(orderId, productId); // requires service update
+            await _orderDetailService.DeleteAsync(orderId); // requires service update
             return NoContent();
         }
     }
